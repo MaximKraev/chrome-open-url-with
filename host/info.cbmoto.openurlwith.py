@@ -15,11 +15,10 @@ try:
   json = simplejson.loads( message  ) # Read msg into JSON object
   url = json['srcUrl']
   subprocess.call(['mpv', url])
-  message='{"result": "'+url+'"}'
+  message='{"result": "' + url + '"}'
 except Exception as e:
   message='{"error": "' + str(e) + '"}' # Send a message back
 
 sys.stdout.write(struct.pack('I', len(message))) # Write message size
 sys.stdout.write(message) # Write the message itself
 sys.stdout.flush()
-sys.exit(0)
