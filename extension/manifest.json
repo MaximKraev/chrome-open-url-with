@@ -1,0 +1,19 @@
+{
+	"name": "Open with Mpv",
+	"short_name": "Open with Mpv",
+	"description": "Open Urls in MPV player",
+	"version": "0.1",
+	"permissions": ["contextMenus","nativeMessaging"],
+	"browser_action": {
+		"title": "Open with MPV"
+	},
+	"icons": {
+		"16": "icon-xs.png",
+		"48": "icon-s.png",
+		"128": "icon-l.png"
+	},
+	"background": {
+		"scripts": ["main.js"]
+	},
+	"manifest_version": 2
+}
