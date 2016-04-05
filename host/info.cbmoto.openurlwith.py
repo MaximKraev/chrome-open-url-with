@@ -14,7 +14,7 @@ try:
   message = sys.stdin.read(text_length)
   json = simplejson.loads( message  ) # Read msg into JSON object
   url = json['srcUrl']
-  subprocess.call(['mpv', url])
+  subprocess.call(['mpv', '--profile=browser', url])
   message='{"result": "' + url + '"}'
 except Exception as e:
   message='{"error": "' + str(e) + '"}' # Send a message back
